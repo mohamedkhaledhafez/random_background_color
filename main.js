@@ -1,13 +1,15 @@
-let hexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+function change_back() {
+  let hexArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+  let colorParts = [];
+  for (let i = 0; i < 6; i++) {
+    colorParts.push(hexArray[Math.floor(Math.random() * hexArray.length)]);
+  }
 
-let colorParts = [];
+  finalColor = `#${colorParts.join("")}`;
 
-for (let i = 0; i < 6; i++) {
-  colorParts.push(hexArray[Math.floor(Math.random() * hexArray.length)]);
+  // document.body.append(finalColor);
+
+  document.body.style.backgroundColor = finalColor;
 }
 
-finalColor = `#${colorParts.join("")}`;
-
-document.body.append(finalColor);
-
-document.body.style.backgroundColor = finalColor;
+setInterval(change_back, 1000);
