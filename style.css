@@ -12,4 +12,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 1s ease;
+  -webkit-transition: background-color 1s ease;
+  -moz-transition: background-color 1s ease;
+  -ms-transition: background-color 1s ease;
+  -o-transition: background-color 1s ease;
 }
